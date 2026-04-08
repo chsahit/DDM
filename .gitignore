@@ -1,0 +1,4 @@
+build/
+DDM/dist/
+DDM/__pycache__/
+DDM/closestPointonSurface.egg-info/
