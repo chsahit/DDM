@@ -118,7 +118,7 @@ def _closest_point_on_triangle_single(point, f1, f2, f3):
     # Region 6: t < 0
     r6_s_a = jnp.clip((c + e - b - d) / (a - 2.0 * b + c), 0.0, 1.0)
     r6_t_a = 1.0 - r6_s_a
-    r6_s_b = jnp.clip(-e / c, 0.0, 1.0)
+    r6_s_b = jnp.clip(-d / a, 0.0, 1.0)
     r6_t_b = 0.0
     r6_s = jnp.where(a + d > b + e, r6_s_a, r6_s_b)
     r6_t = jnp.where(a + d > b + e, r6_t_a, r6_t_b)
